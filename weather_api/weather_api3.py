@@ -16,7 +16,11 @@ def get_weather():
 		collected_data.append([city, json_data["main"]["temp"], json_data["weather"][0]["description"]])
 	return collected_data
 
-print "City", "\t\t", "Temperature", "\t\t", "Description", "\n"
+start_space = "".ljust(3)
+
+print start_space, "=" * 50
+print start_space, "City".ljust(10), "Temperature".ljust(20), "Description" 
+print start_space, "=" * 50
 
 for data in get_weather():
-	print  data[0], "\t\t", data[1], "\t\t", data[2], "\n"
+	print  start_space, data[0].ljust(10), str(data[1]).ljust(20), data[2], "\n"
