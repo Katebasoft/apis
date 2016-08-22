@@ -3,9 +3,6 @@ import urllib3, json
 city_names = ['Nairobi', 'London', 'Lagos']
 app_key = '2bc3e79bb974a007818864813f53fd35'
 
-
-
-
 def get_weather():
 	collected_data = []
 	for city in city_names:
